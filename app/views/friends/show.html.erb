@@ -1,0 +1,27 @@
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+
+
+
+<div class="jumbotron">
+  <h1 class="display-4"><%= @friend.first_name %>
+  <%= @friend.last_name %></h1></h1>
+  <p class='lead'>
+  <%= @friend.email %>|
+  <%= @friend.phone %>|
+  <%= @friend.twitter %>
+
+</p>
+
+
+</p></br>
+  <%= link_to 'Edit', edit_friend_path(@friend), class:"btn btn-secondary" %> 
+  <%= link_to 'Delete', @friend, method: :delete, data: { confirm: 'Are you sure?' },class:"btn btn-danger" %>
+  <%= link_to 'Back', friends_path, class:"btn btn-dark" %>
+</div>
+
+
+
+
+
+
